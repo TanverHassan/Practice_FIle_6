@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: red;
+    text-align: center;
+}
+
+h1::before{
+    content: "age-";
+}
+h1::after{
+    content: "-pore";
+}
+h3{
+    color: blue;
+    text-align: center;
+}
+p::before{
+    content: "'";
+}
+p::after{
+    content: "'";
+}
+.button{
+    text-align: center;
+    margin-top: 50px;
+}
+.but{
+    color: #ddd;
+    text-decoration: none;
+    display: inline-block;
+    background-color: blue;
+    padding: 15px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    transition: .4s;
+}
+.but::before{
+    content: "";
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    border-radius: 10px;
+    z-index: -1;
+}
+.but:hover::before{
+    height: 100%;
+}
